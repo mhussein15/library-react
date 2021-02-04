@@ -13,25 +13,8 @@ export default function BookDetailPage() {
   const { bookSlug } = useParams();
   const dispatch = useDispatch();
   const book = useData(bookSlug, "book", books);
-  let lastUser = "";
-  if (book.borrowedBy.length > 0) {
-    let lastID = book.borrowedBy.slice(-1)[0];
-    lastUser = members.find((member) => member.id === lastID);
-  }
-  const lastUserView = lastUser ? (
-    <p className="card-text lead">
-      Last User
-      <br />
-      <Link
-        className="lead text-decoration-none"
-        to={`/member/${lastUser.slug}`}
-      >
-        {`${lastUser.firstName} ${lastUser.lastName}`}
-      </Link>
-    </p>
-  ) : (
-    ""
-  );
+
+ 
 
   const memberList = members.map((member) =>
     member.firstName.concat(" ", member.lastName)
@@ -59,8 +42,6 @@ export default function BookDetailPage() {
               {book.genre.map((g) => (
                 <p className="card-text lead p-0">{g}</p>
               ))}
-              {lastUserView}
-
               <p className="card-text">
                 <Link
                   className="lead text-decoration-none"

@@ -114,7 +114,11 @@ const reducer = (state = initialState, action) => {
         memberData.currentlyBorrowedBooks.length < 2
       ) {
         memberData.currentlyBorrowedBooks.push(bookTakenID);
-        newBookTakeBook[takenBookIndex] = { ...bookData, available: false };
+        newBookTakeBook[takenBookIndex] = {
+          ...bookData,
+          available: false,
+          borrowedBy: [...bookData.borrowedBy, memberData.id],
+        };
         state.latest.push(
           `${memberData.firstName} ${memberData.lasttName} has taken ${bookData.title}`
         );
@@ -123,7 +127,11 @@ const reducer = (state = initialState, action) => {
         memberData.currentlyBorrowedBooks.length < 3
       ) {
         memberData.currentlyBorrowedBooks.push(bookTakenID);
-        newBookTakeBook[takenBookIndex] = { ...bookData, available: false };
+        newBookTakeBook[takenBookIndex] = {
+          ...bookData,
+          available: false,
+          borrowedBy: [...bookData.borrowedBy, memberData.id],
+        };
         state.latest.push(
           `${memberData.firstName} ${memberData.lasttName} has taken ${bookData.title}`
         );
@@ -132,9 +140,13 @@ const reducer = (state = initialState, action) => {
         memberData.currentlyBorrowedBooks.length < 5
       ) {
         memberData.currentlyBorrowedBooks.push(bookTakenID);
-        newBookTakeBook[takenBookIndex] = { ...bookData, available: false };
+        newBookTakeBook[takenBookIndex] = {
+          ...bookData,
+          available: false,
+          borrowedBy: [...bookData.borrowedBy, memberData.id],
+        };
         state.latest.push(
-          `${memberData.firstName} ${memberData.lasttName} has taken ${bookData.title}`
+          `${memberData.firstName} ${memberData.lastName} has taken ${bookData.title}`
         );
       }
 
