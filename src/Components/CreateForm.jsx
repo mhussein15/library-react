@@ -50,22 +50,18 @@ export default function CreateForm({ memberEdit }) {
           ref={register({ required: true })}
         />
       </div>
-      {!memberEdit ? (
-        <div class="col-12">
-          <select
-            required
-            class="form-select"
-            name="membership"
-            ref={register({ required: true })}
-          >
-            <option value="Silver">Silver</option>
-            <option value="Gold">Gold</option>
-            <option value="Platinum">Platinum</option>
-          </select>
-        </div>
-      ) : (
-        ""
-      )}
+      <div class="col-12">
+        <select
+          required
+          class="form-select"
+          name="membership"
+          ref={register({ required: true })}
+        >
+          <option value="Silver">Silver</option>
+          <option value="Gold">Gold</option>
+          <option value="Platinum">Platinum</option>
+        </select>
+      </div>
       <div className="col-12">
         <input
           class="form-control"

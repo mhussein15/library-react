@@ -14,6 +14,7 @@ export default function AddEditBookForm({ bookEdit }) {
       genre: bookEdit ? bookEdit.genre : [],
       available: bookEdit ? bookEdit.available : true,
       imageURL: bookEdit ? bookEdit.imageURL : "",
+      borrowedBy:bookEdit?bookEdit.borrowedBy:[]
     },
   });
   const onSubmit = (data) => {

@@ -6,7 +6,7 @@ const members = [
     slug: "aziz-alsaffar",
     currentlyBorrowedBooks: [3, 9],
     membership: "gold", // can borrow 3 books
-    imageURL: `https://i.pravatar.cc/600?img=${1}`,
+    imageURL: `https://i.pravatar.cc/600?img=${68}`,
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const members = [
     slug: "hashim-behbehani",
     currentlyBorrowedBooks: [5],
     membership: "gold", // can borrow 3 books
-    imageURL: `https://i.pravatar.cc/600?img=${9}`,
+    imageURL: `https://i.pravatar.cc/600?img=${60}`,
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const members = [
     slug: "alhmaza-abdulmonem",
     currentlyBorrowedBooks: [1, 2],
     membership: "silver", // can borrow 2 books
-    imageURL: `https://i.pravatar.cc/600?img=${3}`,
+    imageURL: `https://i.pravatar.cc/600?img=${56}`,
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const members = [
     slug: "reem-alhasawi",
     currentlyBorrowedBooks: [],
     membership: "platinum", // can borrow 5 books
-    imageURL: `https://i.pravatar.cc/600?img=${4}`,
+    imageURL: `https://i.pravatar.cc/600?img=${47}`,
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const members = [
     slug: "laila-alkandery",
     currentlyBorrowedBooks: [10, 7, 8],
     membership: "platinum", // can borrow 5 books
-    imageURL: `https://i.pravatar.cc/600?img=${7}`,
+    imageURL: `https://i.pravatar.cc/600?img=${41}`,
   },
 
 ];
